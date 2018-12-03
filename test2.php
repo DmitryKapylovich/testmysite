@@ -1,4 +1,5 @@
 <?
+<<<<<<< HEAD
 echo "hello world   12321231 ";
 for ($x=0; $x<10; $x++)
     echo "<br>$x;";
