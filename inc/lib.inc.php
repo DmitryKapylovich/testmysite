@@ -1,9 +1,5 @@
 <?php
-        drawTable(3,3);
-        drawTable(3,3);
-        drawTable(3,3);
-      
-     function drawMenu($menu, $vertical=true){
+function drawMenu($menu, $vertical=true){
  $style = "";
     if(!$vertical)
         $style = " style='display:inline; margin-right:15px'";
@@ -16,4 +12,25 @@
       }
     echo "</ul>";
 }
- ?>
+$cols = 10;
+$rows = 10;
+function drawTable($cols=10, $rows=10, $color="yellow"){
+    static $cnt = 0;
+    $cnt++;
+    echo "Таблица рисуется $cnt раз";
+  echo "<table border='1'>";
+      for($tr=1; $tr<=$rows; $tr++){
+          echo "<tr>";
+          for($td=1; $td<=$cols; $td++){
+              if($tr==1 or $td==1)
+                echo "<th style='background:$color'>" . $tr*$td . "</th>";
+              else
+                echo "<td>" . $tr*$td . "</td>";          
+             
+          }
+          echo "</tr>";          
+      }     
+      
+      echo "</table>";   
+} 
+?>
